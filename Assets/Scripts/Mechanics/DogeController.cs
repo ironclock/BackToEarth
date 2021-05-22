@@ -98,7 +98,7 @@ public class DogeController : MonoBehaviour
         rb2d.gravityScale = 1.25f;
         if (rb2d.velocity.y < 4)
         {
-            rb2d.gravityScale = 17f;
+            rb2d.gravityScale = 22f;
         }
     }
     private void orientCharacter(float direction)
