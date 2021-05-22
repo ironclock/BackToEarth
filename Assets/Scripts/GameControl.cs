@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;  
 
 public class GameControl : MonoBehaviour
 {
@@ -139,6 +140,7 @@ public class GameControl : MonoBehaviour
         if(pos.y <= 0f){
             //screen stops scrolling
             //player shrinks down to earth
+            SceneManager.LoadScene("Scenes/Platformer"); 
         }
     }
 
