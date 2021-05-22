@@ -150,7 +150,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406697211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 735789364}
@@ -348,10 +348,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 505114701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22919ae8acde24d628ffbef38191ae30, type: 3}
+  m_Script: {fileID: 11500000, guid: f2251b651ddeed2489815f26b026e905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  trailSize: 35
+  spacing: 0
+  color: {r: 255, g: 255, b: 255, a: 100}
+  ghostMaterial: []
+  ghostSpriteSortingOrder: 0
+  renderOnMotion: 0
+  colorAlphaOverride: 1
+  alphaFluctuationOverride: 0.15
+  alphaFluctuationDivisor: 100
 --- !u!114 &505114705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,18 +369,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 505114701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2251b651ddeed2489815f26b026e905, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d73f41a1921c43f9bae63237149877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailSize: 10
-  spacing: 5
-  color: {r: 255, g: 255, b: 255, a: 100}
-  ghostMaterial: []
-  ghostSpriteSortingOrder: 0
-  renderOnMotion: 0
-  colorAlphaOverride: 1
-  alphaFluctuationOverride: 0.314
-  alphaFluctuationDivisor: 92
+  speed: 10
 --- !u!1 &735789360
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1505685191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 941a7731e4c1e4352aa35d7e50c0837c, type: 3}
+  m_Script: {fileID: 11500000, guid: f137eaa714e8d4a2b8166b748a892649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1505685193
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1796021611}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1796021614

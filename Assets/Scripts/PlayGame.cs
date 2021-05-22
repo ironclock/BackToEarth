@@ -19,6 +19,6 @@ public class PlayGame : MonoBehaviour
     }
 
     public void Scene1() {  
-        SceneManager.LoadScene("SampleScene");  
+        SceneManager.LoadScene("SpaceShooter");  
     }
 }
