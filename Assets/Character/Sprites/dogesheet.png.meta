@@ -1,0 +1,984 @@
+fileFormatVersion: 2
+guid: 037b046dd2d2cd5439fb543be2865a95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3239301622929968175
+    second: dogesheet_0
+  - first:
+      213: 955832545804751424
+    second: dogesheet_1
+  - first:
+      213: 6259391881027078843
+    second: dogesheet_2
+  - first:
+      213: 9081173322280230849
+    second: dogesheet_3
+  - first:
+      213: 5128193789341317146
+    second: dogesheet_4
+  - first:
+      213: -2508938066771980157
+    second: dogesheet_5
+  - first:
+      213: -4700499865777488847
+    second: dogesheet_6
+  - first:
+      213: 298122782533117280
+    second: dogesheet_7
+  - first:
+      213: -5628197130063191793
+    second: dogesheet_8
+  - first:
+      213: -646208247189566288
+    second: dogesheet_9
+  - first:
+      213: -1381829055935226125
+    second: dogesheet_10
+  - first:
+      213: 330088993005895687
+    second: dogesheet_11
+  - first:
+      213: -5694209895265289239
+    second: dogesheet_12
+  - first:
+      213: -6725420876050636212
+    second: dogesheet_13
+  - first:
+      213: -7783765686088639536
+    second: dogesheet_14
+  - first:
+      213: 2048970189081386355
+    second: dogesheet_15
+  - first:
+      213: 2734797767445461468
+    second: dogesheet_16
+  - first:
+      213: 5108847427144552320
+    second: dogesheet_17
+  - first:
+      213: -4510313148141867621
+    second: dogesheet_18
+  - first:
+      213: -7534645598891045149
+    second: dogesheet_19
+  - first:
+      213: -5251074505664329648
+    second: dogesheet_20
+  - first:
+      213: 3518234519844857717
+    second: dogesheet_21
+  - first:
+      213: -7605610045970131208
+    second: dogesheet_22
+  - first:
+      213: 8545596007258831969
+    second: dogesheet_23
+  - first:
+      213: 1919642162050776441
+    second: dogesheet_24
+  - first:
+      213: -4838382570585130692
+    second: dogesheet_25
+  - first:
+      213: -7356437943627777621
+    second: dogesheet_26
+  - first:
+      213: -9089453645604405186
+    second: dogesheet_27
+  - first:
+      213: 6947331253976062819
+    second: dogesheet_28
+  - first:
+      213: -5116518349409446878
+    second: dogesheet_29
+  - first:
+      213: 732714950866970055
+    second: dogesheet_30
+  - first:
+      213: 2702726466461723420
+    second: dogesheet_31
+  - first:
+      213: 9173295823507427938
+    second: dogesheet_32
+  - first:
+      213: 204913771244356805
+    second: dogesheet_33
+  - first:
+      213: -2972398159217347980
+    second: dogesheet_34
+  - first:
+      213: -687939685599775956
+    second: dogesheet_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dogesheet_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1032
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3b9e42650bb03d0800000000000000
+      internalID: -3239301622929968175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1032
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042137dd2acc34d00800000000000000
+      internalID: 955832545804751424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1032
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba459a80c3ddd650800000000000000
+      internalID: 6259391881027078843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1032
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf5442c50fc60e70800000000000000
+      internalID: 9081173322280230849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_4
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 904
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18bd01c4110b2740800000000000000
+      internalID: 5128193789341317146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_5
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 904
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380d9960f167e2dd0800000000000000
+      internalID: -2508938066771980157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_6
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 904
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cbf81c64874ceb0800000000000000
+      internalID: -4700499865777488847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_7
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 904
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06566585715232400800000000000000
+      internalID: 298122782533117280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 776
+        width: 56
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01e5b89780a4e1b0800000000000000
+      internalID: -5628197130063191793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 776
+        width: 56
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc865fd5053807f0800000000000000
+      internalID: -646208247189566288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 776
+        width: 56
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fedaac7bc1c2dce0800000000000000
+      internalID: -1381829055935226125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_11
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 776
+        width: 56
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7000264b036b49400800000000000000
+      internalID: 330088993005895687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 648
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebb23cf44a1af0b0800000000000000
+      internalID: -5694209895265289239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_13
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 648
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42610698518aa2a0800000000000000
+      internalID: -6725420876050636212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_14
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 648
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbdfc149528af390800000000000000
+      internalID: -7783765686088639536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_15
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 648
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d9f83f7876f6c10800000000000000
+      internalID: 2048970189081386355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 520
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd93e157414f3f520800000000000000
+      internalID: 2734797767445461468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 520
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f8e9acaa546e640800000000000000
+      internalID: 5108847427144552320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 520
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9dea33a6162861c0800000000000000
+      internalID: -4510313148141867621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_19
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 520
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee83a18fbf8f6790800000000000000
+      internalID: -7534645598891045149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 392
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05884c8fe8f6027b0800000000000000
+      internalID: -5251074505664329648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_21
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 392
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577aed7c7a743d030800000000000000
+      internalID: 3518234519844857717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_22
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 392
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6decd95f1737690800000000000000
+      internalID: -7605610045970131208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_23
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 392
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cb8a6ca4e089670800000000000000
+      internalID: 8545596007258831969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_24
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 264
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d36ec2060f3aa10800000000000000
+      internalID: 1919642162050776441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_25
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 264
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39f4d8dfac9adcb0800000000000000
+      internalID: -4838382570585130692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_26
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 264
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba97cd59aaea8e990800000000000000
+      internalID: -7356437943627777621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_27
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 264
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30ce5b3116cbd180800000000000000
+      internalID: -9089453645604405186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_28
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 224
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b563a87f0e96060800000000000000
+      internalID: 6947331253976062819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_29
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 136
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2249ea07ba97ef8b0800000000000000
+      internalID: -5116518349409446878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_30
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 136
+        width: 88
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c52b00ad502b2a00800000000000000
+      internalID: 732714950866970055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_31
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 136
+        width: 88
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b6f7ec663028520800000000000000
+      internalID: 2702726466461723420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_32
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 20
+        width: 104
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2621cb303f71e4f70800000000000000
+      internalID: 9173295823507427938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_33
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 8
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c40b904dfff7d200800000000000000
+      internalID: 204913771244356805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_34
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 8
+        width: 92
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47233d46f9befb6d0800000000000000
+      internalID: -2972398159217347980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogesheet_35
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 16
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c237ee43082f376f0800000000000000
+      internalID: -687939685599775956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -35,15 +35,21 @@ public class DogeController : MonoBehaviour
     public bool grounded = true;
 
     //character visual variables
-    Vector3 characterScale;
+    private Vector3 characterScale;
     float characterScaleX;
 
     // origin position, reset when die
-    private Vector3 originPos;
+    public Vector3 respawnPos;
+
+    //starting "animation"
+    public GameObject spaceship;
+    public bool playerMovable;
+    public Animator animator;
 
     void Awake()
     {
         health = 100;
+        playerMovable = false;
 
         rb2d = GetComponent<Rigidbody2D> ();
         boxCollider2D = transform.GetComponent<BoxCollider2D>();
@@ -56,36 +62,55 @@ public class DogeController : MonoBehaviour
 
     private void Start()
     {
-        originPos = transform.position;
     }
 
     void Update()
     {
-        tryJumping();
-        adjustGravity();
-        checkDash();
-        tryShooting();
-
-        if (dashing == false)
+        if (playerMovable)
         {
-            float directionX = Input.GetAxisRaw("Horizontal");
-            if (directionX == 0) //not moving
+            if (IsGrounded())
             {
-                currentSpeed = 0;
+                animator.SetFloat("speed", Mathf.Abs(rb2d.velocity.x));
+            }
+            if (rb2d.velocity.y > 0.01)
+            {
+                animator.SetBool("going_up", true);
             }
             else
             {
-                if (Mathf.Abs(currentSpeed) < maxSpeed) //increment speed
-                {
-                    currentSpeed += acceleration * directionX;
-                }
-                else //limit to max speed
-                {
-                    currentSpeed = maxSpeed * directionX;
-                }
-                rb2d.velocity = new Vector2(currentSpeed, rb2d.velocity.y); //add velocity
+                animator.SetBool("going_up", false);
             }
-            orientCharacter(directionX);
+            
+            tryJumping();
+            adjustGravity();
+            checkDash();
+            //tryShooting();
+
+            if (dashing == false)
+            {
+                float directionX = Input.GetAxisRaw("Horizontal");
+                if (directionX == 0) //not moving
+                {
+                    currentSpeed = 0;
+                }
+                else
+                {
+                    if (Mathf.Abs(currentSpeed) < maxSpeed) //increment speed
+                    {
+                        currentSpeed += acceleration * directionX;
+                    }
+                    else //limit to max speed
+                    {
+                        currentSpeed = maxSpeed * directionX;
+                    }
+                    rb2d.velocity = new Vector2(currentSpeed, rb2d.velocity.y); //add velocity
+                }
+                orientCharacter(directionX);
+            }
+        }
+        else
+        {
+            transform.position = spaceship.transform.position;
         }
     }
 
@@ -101,7 +126,7 @@ public class DogeController : MonoBehaviour
             rb2d.gravityScale = 22f;
         }
     }
-    private void orientCharacter(float direction)
+    public void orientCharacter(float direction)
     {
         if (direction < 0) {
             characterScale.x = characterScaleX;
@@ -185,7 +210,7 @@ public class DogeController : MonoBehaviour
         {
             GameObject projectile = Instantiate(Resources.Load("Prefabs/playerProjectile") as GameObject);
             Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-            projectile.transform.localPosition = transform.localPosition;
+            projectile.transform.position = transform.position;
             if (characterScale.x < 0) //right
             {
                 projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed * 2, 0);
@@ -203,7 +228,7 @@ public class DogeController : MonoBehaviour
         if (collision.gameObject.tag == "DeathZone" || collision.gameObject.tag == "PBullet")
         {
             Debug.Log("Die!");
-            transform.position = originPos;
+            transform.position = respawnPos;
         }
     }
 }
