@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
 {
-    public const float kMainProjSpeed = 10f;
+    public float kProjSpeed;
     public const int kLifetime = 300; // alive for this many cycles
     
     public int mLifeCount = 0;
@@ -12,12 +12,27 @@ public class ProjectileBehavior : MonoBehaviour
     void Start()
     {
         mLifeCount = kLifetime;
+        if(gameObject.name == "mainProjectile(Clone)"){
+            kProjSpeed = 20f;
+        }
+        if(gameObject.name == "mainEnemyProjectile(Clone)"){
+            kProjSpeed = 10f;
+        }
+        if(gameObject.name == "mainEnemyTrackingProjectile(Clone)"){
+            kProjSpeed = 5f;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += ((kMainProjSpeed * Time.smoothDeltaTime) * transform.up);
+        if(gameObject.name == "mainEnemyTrackingProjectile(Clone)"){
+            Vector3 target = GameObject.Find("PlayerShip").transform.position;
+            transform.position = Vector3.MoveTowards(transform.position, target, kProjSpeed * Time.deltaTime);
+        }
+        else{
+            transform.position += ((kProjSpeed * Time.smoothDeltaTime) * transform.up);
+        }
         mLifeCount--;
         if(mLifeCount <= 0)
         {

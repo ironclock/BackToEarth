@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-    private const int kMaxEnemy1 = 5;
+    private const int kMaxEnemy1 = 4;
     private const int kMaxEnemy2 = 2;
 
     private int mTotalEnemy1 = 0;
@@ -13,11 +13,15 @@ public class GameControl : MonoBehaviour
     private Vector2 mSpawnRegionMin, mSpawnRegionMax;
     private int mEnemyDestroyed = 0;
     private float xOFfset = 3f;
+    private float yOFfset = 3f;
     private bool halt = false;
     private bool finalBossGenerated = false;
     private bool earthGenerated = false;
     private bool earthTime = false;
     private float speedDown = 1f;
+    
+    private float genRate = 1f;
+    private float lastGen = 0.0f;
 
     private ScoringSystem mScoringSystem;
 
@@ -35,12 +39,15 @@ public class GameControl : MonoBehaviour
         {
             Application.Quit();
         }
-
-        if(mTotalEnemy1 < kMaxEnemy1){
-            GenerateEnemy1();
-        }
-        if(mTotalEnemy2 < kMaxEnemy2){
-            GenerateEnemy2();
+        if(Time.time > lastGen + genRate)
+        {
+            if(mTotalEnemy1 < kMaxEnemy1){
+                GenerateEnemy1();
+            }
+            if(mTotalEnemy2 < kMaxEnemy2){
+                GenerateEnemy2();
+            }
+            lastGen = Time.time;
         }
 
         if((mScoringSystem.getScore() >= mScoringSystem.getFinalBossThreshold()) && !finalBossGenerated){
@@ -69,7 +76,7 @@ public class GameControl : MonoBehaviour
         mSpawnRegionMax = b.max;
 
         float x = Random.Range(mSpawnRegionMin.x + xOFfset, mSpawnRegionMax.x - xOFfset);
-        float y = Random.Range(mSpawnRegionMax.y, 2 * mSpawnRegionMax.y); //spawns in this range above screen
+        float y = Random.Range(mSpawnRegionMax.y + yOFfset, 1.5f * mSpawnRegionMax.y); //spawns in this range above screen
         pos = new Vector3(x, y, 0f);
         return pos;
     }
@@ -87,16 +94,23 @@ public class GameControl : MonoBehaviour
         }
         mEnemyDestroyed++;
     }
-    public Vector3 CheckEnemyOutOfView(Vector3 pos, GameObject g) { 
+    public Vector3 CheckEnemyOutOfView(Vector3 pos, GameObject g, ref bool stopFiring) { 
         if(pos.y < (mSpawnRegionMin.y - 2f)){ // to make sure it's off screen
             if(halt){//halted for final boss
                 //destroy enemy
                 Destroy(g);
             }
-            else{
+            else{//reposition
                 pos.x = Random.Range(mSpawnRegionMin.x + xOFfset, mSpawnRegionMax.x - xOFfset);
-                pos.y = Random.Range(mSpawnRegionMax.y, 2 * mSpawnRegionMax.y); //spawns in this range above screen
+                pos.y = Random.Range(mSpawnRegionMax.y + yOFfset, 1.5f * mSpawnRegionMax.y); //spawns in this range above screen
             }
+        }
+        Vector3 playerPos = GameObject.Find("PlayerShip").transform.position;
+        if(pos.y < playerPos.y){ // stop firing if past player
+            stopFiring = true;
+        }
+        else{// keep firing if repositioned
+            stopFiring = false;
         }
         return pos;
     }

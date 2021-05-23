@@ -7,10 +7,10 @@ public class PlayerBehavior : MonoBehaviour
 {
     [Header("Movement Behavior")]
     public float Speed = 0f;
-    public float MaxSpeed = 5f;
-    public float Acceleration = 10f;
+    public float MaxSpeed = 7f;
+    public float Acceleration = 50f;
     public float Deceleration = 50f;
-    public float VerticalSpeed = 2f;
+    public float VerticalSpeed = 3f;
 
 
     [Header("Sprite Animation")]
