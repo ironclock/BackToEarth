@@ -100,7 +100,7 @@ public class GameControl : MonoBehaviour
                 //destroy enemy
                 Destroy(g);
             }
-            else{//reposition
+            else{//reposition 
                 pos.x = Random.Range(mSpawnRegionMin.x + xOFfset, mSpawnRegionMax.x - xOFfset);
                 pos.y = Random.Range(mSpawnRegionMax.y + yOFfset, 1.5f * mSpawnRegionMax.y); //spawns in this range above screen
             }
