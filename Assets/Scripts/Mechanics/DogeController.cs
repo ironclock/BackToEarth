@@ -8,6 +8,7 @@ public class DogeController : MonoBehaviour
     public float health;
     public float fireDelay;
     private float nextFireTime;
+    public Transform firePoint;
 
     
     //speed/movement variables
@@ -210,7 +211,7 @@ public class DogeController : MonoBehaviour
         {
             GameObject projectile = Instantiate(Resources.Load("Prefabs/playerProjectile") as GameObject);
             Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-            projectile.transform.position = transform.position;
+            projectile.transform.position = firePoint.position;
             if (characterScale.x > 0) //right
             {
                 projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed * 2, 0);
