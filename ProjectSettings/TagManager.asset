@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - PBullet
   - Ground
+  - Platform
+  - Player
   layers:
   - Default
   - TransparentFX
