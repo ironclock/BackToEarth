@@ -16,6 +16,7 @@ public class StationaryBehaviour : MonoBehaviour
             for (int i = 0; i < randBulletCounter; i++)
             {
                 mainProjectile = Instantiate(Resources.Load("Prefabs/Egg") as GameObject);
+                Physics2D.IgnoreCollision(mainProjectile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
                 mainProjectile.transform.localPosition = transform.localPosition;
                 mainProjectile.transform.rotation = Quaternion.Euler(0, 0, 90 - i * 4);
                 lastShot = Time.time;
