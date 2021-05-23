@@ -97,14 +97,5 @@ public class PlayerBehavior : MonoBehaviour
                 lastShot = Time.time;
             }
         }
-
-
-
-
     }
-
-
-
- 
-
 }

@@ -200,7 +200,7 @@ public class DogeController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "DeathZone")
+        if (collision.gameObject.tag == "DeathZone" || collision.gameObject.tag == "PBullet")
         {
             Debug.Log("Die!");
             transform.position = originPos;
