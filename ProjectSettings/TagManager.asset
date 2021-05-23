@@ -47,9 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: In Front of Platforms
-    uniqueID: 382780429
-    locked: 0
   - name: Platforms
     uniqueID: 3103283145
+    locked: 0
+  - name: In Front of Platforms
+    uniqueID: 382780429
     locked: 0
