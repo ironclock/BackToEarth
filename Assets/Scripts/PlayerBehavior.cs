@@ -25,19 +25,20 @@ public class PlayerBehavior : MonoBehaviour
     private GameObject mainProjectile;
     private float fireRate = 0.3f;
     private float lastShot = 0.0f;
+
+    private HealthSystem mHealthSystem;
     
 
-    // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        mHealthSystem = FindObjectOfType<HealthSystem>();
         if (spriteRenderer.sprite == null)
         {
             spriteRenderer.sprite = originalSprite; 
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -97,5 +98,32 @@ public class PlayerBehavior : MonoBehaviour
                 lastShot = Time.time;
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy"){
+            Debug.Log("Enemy collision with player");
+            mHealthSystem.AddDamageFromEnemy();
+            //possible VFX:
+            //add a bounce from bumping into enemy
+            //flash red from collision
+            //once player is below certain health, show dents
+        }
+        if(collision.gameObject.tag == "EnemyProjectile"){
+            Debug.Log("Enemy collision with projectile");
+            mHealthSystem.AddDamageFromProjectile(collision.gameObject.name);
+            Destroy(collision.gameObject);
+        }
+        if(mHealthSystem.getHealth() <= 0){
+            playerDies();
+        }
+    }
+
+    private void playerDies()
+    {
+        Debug.Log("player dies");
+        //player dies: level restarts
+        //Destroy(gameObject);
     }
 }

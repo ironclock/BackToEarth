@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 80904074481441112}
   m_Layer: 0
   m_Name: mainEnemyProjectile
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d45583ff84adb94490b5618a83e714e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kProjSpeed: 0
   mLifeCount: 0
 --- !u!61 &80904074481441112
 BoxCollider2D:
