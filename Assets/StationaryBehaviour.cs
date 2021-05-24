@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StationaryBehaviour : MonoBehaviour
 {
+    public float shootingAngle;
+    
     private GameObject mainProjectile;
     private float fireRate = 2.0f;
     private float lastShot = 0.0f;
@@ -18,7 +20,7 @@ public class StationaryBehaviour : MonoBehaviour
                 mainProjectile = Instantiate(Resources.Load("Prefabs/Egg") as GameObject);
                 Physics2D.IgnoreCollision(mainProjectile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
                 mainProjectile.transform.localPosition = transform.localPosition;
-                mainProjectile.transform.rotation = Quaternion.Euler(0, 0, 90 - i * 4);
+                mainProjectile.transform.rotation = Quaternion.Euler(0, -180, shootingAngle + i * 4);
                 lastShot = Time.time;
             }
         }
