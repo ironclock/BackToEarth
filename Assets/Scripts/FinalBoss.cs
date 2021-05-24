@@ -48,7 +48,7 @@ public class FinalBoss : MonoBehaviour
         if(collision.gameObject.name == "PlayerShip"){
             Debug.Log("Final Boss collision with player");
         }
-        if(collision.gameObject.name == "mainProjectile(Clone)"){
+        if(collision.gameObject.name == "mainProjectile(Clone)" && currPhase > 0){
             Debug.Log("Final Boss collision with projectile");
             numCollides++;
             Destroy(collision.gameObject);
