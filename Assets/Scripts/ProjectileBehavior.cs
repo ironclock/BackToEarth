@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileBehavior : MonoBehaviour
 {
     public float kProjSpeed;
-    public const int kLifetime = 500; // alive for this many cycles
+    public const int kLifetime = 600; // alive for this many cycles
     
     public int mLifeCount = 0;
 
@@ -33,9 +33,11 @@ public class ProjectileBehavior : MonoBehaviour
         
             Vector3 lookDirection = target - new Vector3(transform.position.x, transform.position.y);
             float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-            Quaternion qTo = Quaternion.Euler(new Vector3(0, 0, angle));
-            
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, 100f * Time.deltaTime);
+            if (mLifeCount > 0.4 * kLifetime) //turns during the start of its life
+            {
+                Quaternion qTo = Quaternion.Euler(new Vector3(0, 0, angle));
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, 45f * Time.deltaTime);
+            }
             transform.position += transform.up * (kProjSpeed * Time.smoothDeltaTime);
         }
         else{

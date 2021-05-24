@@ -85,7 +85,7 @@ public class DogeController : MonoBehaviour
             tryJumping();
             adjustGravity();
             checkDash();
-            tryShooting();
+            //tryShooting();
 
             if (dashing == false)
             {
