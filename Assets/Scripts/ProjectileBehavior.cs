@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileBehavior : MonoBehaviour
 {
     public float kProjSpeed;
-    public const int kLifetime = 600; // alive for this many cycles
+    public const int kLifetime = 300; // alive for this many cycles
     
     public int mLifeCount = 0;
 
