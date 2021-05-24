@@ -48,5 +48,22 @@ public class ProjectileBehavior : MonoBehaviour
         {
             Destroy(gameObject); // ends instance of self
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(gameObject.name == "mainProjectile(Clone)" && collision.gameObject.name == "mainEnemyTrackingProjectile(Clone)") {
+            Debug.Log("projectile collision with enemy projectile");
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
+
+        if(gameObject.name == "mainProjectile(Clone)" && collision.gameObject.name == "OutOfBounds") {
+            Debug.Log("projectile has left screen");
+            Destroy(gameObject);
+        }
+
     }
 }

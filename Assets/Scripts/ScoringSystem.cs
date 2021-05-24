@@ -26,19 +26,19 @@ public class ScoringSystem : MonoBehaviour
     public void AddEnemy1ToScore()
     {
         scoreValue += mEnemy1Value;
-        mScore.text = "Score: " + scoreValue;
+        mScore.text = "SCORE: " + scoreValue;
     }
 
     public void AddEnemy2ToScore()
     {
         scoreValue += mEnemy2Value;
-        mScore.text = "Score: " + scoreValue;
+        mScore.text = "SCORE: " + scoreValue;
     }
 
     public void AddFinalBossToScore()
     {
         scoreValue += mFinalBossValue;
-        mScore.text = "Score: " + scoreValue;
+        mScore.text = "SCORE: " + scoreValue;
     }
 
     public int getScore()
