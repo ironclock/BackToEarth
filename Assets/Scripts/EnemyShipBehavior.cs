@@ -69,6 +69,6 @@ public class EnemyShipBehavior : MonoBehaviour
     private void enemy2Fire(){
         GameObject projectile = Instantiate(Resources.Load("Prefabs/mainEnemyTrackingProjectile") as GameObject); 
         projectile.transform.localPosition = transform.localPosition;
-        projectile.transform.rotation = Quaternion.Euler(0, 0, 180);
+        projectile.transform.rotation = Quaternion.Euler(0, 0, -90);
     }
 }
