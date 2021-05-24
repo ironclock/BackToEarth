@@ -11,6 +11,8 @@ public class ProjectileBehavior : MonoBehaviour
 
     void Start()
     {
+        transform.Rotate(180.0f, 180.0f, 180.0f);
+
         mLifeCount = kLifetime;
         if(gameObject.name == "mainProjectile(Clone)"){
             kProjSpeed = 20f;
@@ -28,7 +30,13 @@ public class ProjectileBehavior : MonoBehaviour
     {
         if(gameObject.name == "mainEnemyTrackingProjectile(Clone)"){
             Vector3 target = GameObject.Find("PlayerShip").transform.position;
-            transform.position = Vector3.MoveTowards(transform.position, target, kProjSpeed * Time.deltaTime);
+        
+            Vector3 lookDirection = target - new Vector3(transform.position.x, transform.position.y);
+            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+            Quaternion qTo = Quaternion.Euler(new Vector3(0, 0, angle));
+            
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, qTo, 85f * Time.deltaTime);
+            transform.position += transform.up * (kProjSpeed * Time.smoothDeltaTime);
         }
         else{
             transform.position += ((kProjSpeed * Time.smoothDeltaTime) * transform.up);
