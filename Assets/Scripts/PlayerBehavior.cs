@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -124,6 +125,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         Debug.Log("player dies");
         //player dies: level restarts
+        SceneManager.LoadScene("SpaceShooter"); //Load scene called Game.
         //Destroy(gameObject);
     }
 }
