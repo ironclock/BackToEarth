@@ -140,7 +140,7 @@ public class DogeController : MonoBehaviour
     }
     private void tryJumping()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && jumpCount < extraJumps) {
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C)) && jumpCount < extraJumps) {
             rb2d.velocity = Vector2.up * jumpPower;
             jumpCount++;
         }
@@ -185,7 +185,7 @@ public class DogeController : MonoBehaviour
                 firstDashKeyPressed = Time.time;
             }
         }
-        else if ((Time.time - lastDash > dashCooldown && Input.GetKeyDown(KeyCode.Z))) //single key dash
+        else if ((Time.time - lastDash > dashCooldown && Input.GetKeyDown(KeyCode.X))) //single key dash
         {
             if (characterScale.x > 0) //right
             {
