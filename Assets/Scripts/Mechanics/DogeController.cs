@@ -206,7 +206,7 @@ public class DogeController : MonoBehaviour
                 firstDashKeyPressed = Time.time;
             }
         }
-        else if ((Time.time - lastDash > dashCooldown && Input.GetKeyDown(KeyCode.X))) //single key dash
+        else if (Time.time - lastDash > dashCooldown && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift))) //single key dash
         {
             if (characterScale.x > 0) //right
             {
