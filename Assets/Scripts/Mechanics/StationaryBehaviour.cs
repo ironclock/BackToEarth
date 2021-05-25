@@ -7,7 +7,7 @@ public class StationaryBehaviour : MonoBehaviour
     public float shootingAngle;
     
     private GameObject mainProjectile;
-    private float fireRate = 2.0f;
+    public float fireRate = 2.0f;
     private float lastShot = 0.0f;
 
     void Update()
