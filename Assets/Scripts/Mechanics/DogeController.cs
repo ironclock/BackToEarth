@@ -33,11 +33,12 @@ public class DogeController : MonoBehaviour
     public float jumpPower;
     [SerializeField] private LayerMask platformsLayerMask;
     private BoxCollider2D boxCollider2D;
-    public bool grounded = true;
+    private bool grounded = true;
+    private bool goingUp;
 
     //character visual variables
     private Vector3 characterScale;
-    float characterScaleX;
+    private float characterScaleX;
 
     // origin position, reset when die
     public Vector3 respawnPos;
@@ -73,17 +74,19 @@ public class DogeController : MonoBehaviour
             {
                 animator.SetFloat("speed", Mathf.Abs(rb2d.velocity.x));
             }
-            if (rb2d.velocity.y > 0.01)
+            if (rb2d.velocity.y > 4)
             {
+                goingUp = true;
                 animator.SetBool("going_up", true);
             }
             else
             {
+                goingUp = false;
                 animator.SetBool("going_up", false);
             }
 
-            tryJumping();
             adjustGravity();
+            tryJumping();
             checkDash();
             //tryShooting();
 
@@ -125,6 +128,18 @@ public class DogeController : MonoBehaviour
         if (rb2d.velocity.y < 4)
         {
             rb2d.gravityScale = 22f;
+        }
+
+        if(goingUp == true)
+        {
+            if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.C)))
+            {
+                rb2d.gravityScale = 1;
+            }
+            else
+            {
+                rb2d.gravityScale = 22f;
+            }
         }
     }
     public void orientCharacter(float direction)
