@@ -8,6 +8,9 @@ public class DogeController : MonoBehaviour
     public float health;
     public float fireDelay;
     private float nextFireTime;
+    private bool invulnerable;
+    public float invulnerableDuration;
+    private float invulnerableStarted;
     public Transform firePoint;
 
     
@@ -39,6 +42,7 @@ public class DogeController : MonoBehaviour
     //character visual variables
     private Vector3 characterScale;
     private float characterScaleX;
+    private Color color;
 
     // origin position, reset when die
     public Vector3 respawnPos;
@@ -50,7 +54,9 @@ public class DogeController : MonoBehaviour
 
     void Awake()
     {
-        health = 100;
+        color = new Color(1, 1, 1, 1);
+
+        health = 3;
         playerMovable = false;
 
         rb2d = GetComponent<Rigidbody2D> ();
@@ -254,10 +260,57 @@ public class DogeController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "DeathZone" || collision.gameObject.tag == "PBullet")
+        if (collision.gameObject.tag == "DeathZone")
         {
             Debug.Log("Die!");
-            transform.position = respawnPos;
+            respawn();
         }
+        else if (collision.gameObject.tag == "PBullet")
+        {
+            if(!invulnerable)
+            {
+                health--;
+                if(health > 0)
+                {
+                    invulnerable = true;
+                    invulnerableStarted = Time.time;
+                    gameObject.layer = LayerMask.NameToLayer("Invulnerable");
+                    invulnerableFlash();
+                }
+                else
+                {
+                    respawn();
+                }
+            }
+        }
+    }
+
+    private void invulnerableFlash()
+    {
+        Debug.Log("INV");
+        if(Time.time - invulnerableStarted < invulnerableDuration)
+        {
+            if(color.a == 1)
+            {
+                color.a = 0;
+            }
+            else
+            {
+                color.a = 1;
+            }
+            GetComponent<SpriteRenderer>().color = color;
+            Invoke("invulnerableFlash", 0.25f);
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("Default");
+            invulnerable = false;
+        }
+    }
+
+    private void respawn()
+    {
+        transform.position = respawnPos;
+        health = 3;
     }
 }
