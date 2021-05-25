@@ -151,7 +151,7 @@ public class DogeController : MonoBehaviour
     }
     private void checkDash()
     {
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) //left
         {
             if (canDashLeft())
             {
@@ -168,7 +168,7 @@ public class DogeController : MonoBehaviour
                 firstDashKeyPressed = Time.time;
             }
         }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) //right
         {
             if (canDashRight())
             {
@@ -184,6 +184,19 @@ public class DogeController : MonoBehaviour
                 rightPressedOnce = true;
                 firstDashKeyPressed = Time.time;
             }
+        }
+        else if ((Time.time - lastDash > dashCooldown && Input.GetKeyDown(KeyCode.Z))) //single key dash
+        {
+            if (characterScale.x > 0) //right
+            {
+                dash(1);
+            }
+            else //left
+            {
+                dash(-1);
+            }
+            dashing = true;
+            lastDash = Time.time;
         }
         if (Time.time - lastDash > dashTime)
         {
