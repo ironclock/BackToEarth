@@ -7,12 +7,18 @@ public class StationaryBehaviour : MonoBehaviour
     public float shootingAngle;
     
     private GameObject mainProjectile;
+    private GameObject Player;
     public float fireRate = 2.0f;
     private float lastShot = 0.0f;
+    
+    void Start()
+    {
+        Player = GameObject.FindWithTag("Player");
+    }
 
     void Update()
     {
-        if (Time.time > fireRate + lastShot)
+        if (Time.time > fireRate + lastShot && Vector3.Distance(transform.position, Player.transform.position) < 35f)
         {
             int randBulletCounter = Random.Range(1, 4);
             for (int i = 0; i < randBulletCounter; i++)
