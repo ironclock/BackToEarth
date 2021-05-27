@@ -35,7 +35,7 @@ public class DogeController : MonoBehaviour
     private int jumpCount;
     public float jumpPower;
     [SerializeField] private LayerMask platformsLayerMask;
-    private BoxCollider2D boxCollider2D;
+    public BoxCollider2D boxCollider2D;
     private bool grounded = true;
     private bool goingUp;
 
@@ -60,7 +60,6 @@ public class DogeController : MonoBehaviour
         playerMovable = false;
 
         rb2d = GetComponent<Rigidbody2D> ();
-        boxCollider2D = transform.GetComponent<BoxCollider2D>();
         
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
@@ -298,7 +297,7 @@ public class DogeController : MonoBehaviour
                 color.a = 1;
             }
             GetComponent<SpriteRenderer>().color = color;
-            Invoke("invulnerableFlash", 0.25f);
+            Invoke("invulnerableFlash", 0.2f);
         }
         else
         {
