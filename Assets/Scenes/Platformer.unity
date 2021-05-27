@@ -109457,7 +109457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7286501cf8beec4ca11ed8efc390dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScale: {x: 0.2, y: 0.2, z: 1}
+  movementScale: {x: 0.1, y: 0.2, z: 1}
   initialVerticalOffset: 40
   initialHorizontalOffset: 0
 --- !u!212 &1404574709
@@ -109499,7 +109499,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: acbb3645a5a2060459780706b9fce7c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
