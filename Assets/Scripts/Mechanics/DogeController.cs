@@ -130,21 +130,20 @@ public class DogeController : MonoBehaviour
     }
     private void adjustGravity()
     {
-        rb2d.gravityScale = 1.25f;
         if (rb2d.velocity.y < 4)
         {
-            rb2d.gravityScale = 22f;
+            rb2d.gravityScale = 20f;
         }
 
         if(goingUp == true)
         {
             if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.C)))
             {
-                rb2d.gravityScale = 1;
+                rb2d.gravityScale = 0.7f;
             }
             else
             {
-                rb2d.gravityScale = 22f;
+                rb2d.gravityScale = 20f;
             }
         }
     }
