@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementScale: {x: 0.85, y: 0.85, z: 1}
-  initialVerticalOffset: 65
+  initialVerticalOffset: 7
   initialHorizontalOffset: 15
 --- !u!212 &121418336
 SpriteRenderer:
@@ -597,7 +597,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c5ada3e98092aa24283a8ff22dcdb489, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7254902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
