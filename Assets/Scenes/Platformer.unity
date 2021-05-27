@@ -431,6 +431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Doge
       objectReference: {fileID: 0}
+    - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 276881545326814061, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -14077,6 +14081,10 @@ PrefabInstance:
     - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_Name
       value: Big Doge
+      objectReference: {fileID: 0}
+    - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276881545326814061, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_RootOrder
@@ -111873,6 +111881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Doge
       objectReference: {fileID: 0}
+    - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 276881545326814061, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -113223,6 +113235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Doge
       objectReference: {fileID: 0}
+    - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 276881545326814061, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -113283,6 +113299,10 @@ PrefabInstance:
     - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_Name
       value: Big Doge
+      objectReference: {fileID: 0}
+    - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276881545326814061, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_RootOrder
@@ -113778,6 +113798,10 @@ PrefabInstance:
     - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_Name
       value: Big Doge
+      objectReference: {fileID: 0}
+    - target: {fileID: 276881545326814051, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 276881545326814060, guid: 5fd7e857df6f8ea458c1712b11a046d0, type: 3}
       propertyPath: m_Enabled
