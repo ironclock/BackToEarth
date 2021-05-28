@@ -500,7 +500,7 @@ Animator:
   m_GameObject: {fileID: 80843505}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ead6ce52a50de5f4e81febf59129e4ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11f858d510a6beb4da705e4da7673182, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -722,7 +722,7 @@ SpriteRenderer:
   m_Size: {x: 1.61, y: 1.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &185554782
@@ -12401,7 +12401,7 @@ PrefabInstance:
     - target: {fileID: 8494987934029293725, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7281140893596988296, guid: 9e59716a6784c664785e9d1ea55bc89c, type: 3}
+      objectReference: {fileID: 8020143640844766479, guid: 35bbd191e8ff3d14f93d158189995436, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
 --- !u!4 &302428552 stripped
@@ -13990,7 +13990,7 @@ PrefabInstance:
     - target: {fileID: 8494987934029293725, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7281140893596988296, guid: 9e59716a6784c664785e9d1ea55bc89c, type: 3}
+      objectReference: {fileID: 8020143640844766479, guid: 35bbd191e8ff3d14f93d158189995436, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
 --- !u!4 &872902626 stripped
@@ -14488,7 +14488,7 @@ Animator:
   m_GameObject: {fileID: 950794452}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ead6ce52a50de5f4e81febf59129e4ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11f858d510a6beb4da705e4da7673182, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14906,7 +14906,7 @@ PrefabInstance:
     - target: {fileID: 8494987934029293725, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7281140893596988296, guid: 9e59716a6784c664785e9d1ea55bc89c, type: 3}
+      objectReference: {fileID: 8020143640844766479, guid: 35bbd191e8ff3d14f93d158189995436, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
 --- !u!4 &1038401482 stripped
@@ -108472,7 +108472,7 @@ PrefabInstance:
     - target: {fileID: 8494987934029293725, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7281140893596988296, guid: 9e59716a6784c664785e9d1ea55bc89c, type: 3}
+      objectReference: {fileID: 8020143640844766479, guid: 35bbd191e8ff3d14f93d158189995436, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
 --- !u!4 &1198710814 stripped
@@ -108582,7 +108582,7 @@ Animator:
   m_GameObject: {fileID: 1202615166}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ead6ce52a50de5f4e81febf59129e4ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11f858d510a6beb4da705e4da7673182, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -108611,7 +108611,7 @@ Animator:
   m_GameObject: {fileID: 1212910394}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ead6ce52a50de5f4e81febf59129e4ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11f858d510a6beb4da705e4da7673182, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -113945,7 +113945,7 @@ Animator:
   m_GameObject: {fileID: 2130443269}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ead6ce52a50de5f4e81febf59129e4ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11f858d510a6beb4da705e4da7673182, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -114085,7 +114085,7 @@ PrefabInstance:
     - target: {fileID: 8494987934029293725, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7281140893596988296, guid: 9e59716a6784c664785e9d1ea55bc89c, type: 3}
+      objectReference: {fileID: 8020143640844766479, guid: 35bbd191e8ff3d14f93d158189995436, type: 3}
     - target: {fileID: 8494987934029293726, guid: ec513e73572edcc4192fb5073d8b13a2, type: 3}
       propertyPath: m_BodyType
       value: 1

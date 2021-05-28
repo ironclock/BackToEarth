@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8494987934029293726}
   - component: {fileID: 8494987934029293727}
   - component: {fileID: 8494987934029293724}
+  - component: {fileID: 910951268257413690}
   m_Layer: 3
   m_Name: Stationary
   m_TagString: Enemy
@@ -136,3 +137,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingAngle: -90
   fireRate: 2.5
+--- !u!95 &910951268257413690
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494987934029293721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 11f858d510a6beb4da705e4da7673182, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
