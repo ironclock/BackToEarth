@@ -52,6 +52,8 @@ public class DogeController : MonoBehaviour
     public bool playerMovable;
     public Animator animator;
 
+    // health bar
+    public GameObject heart1, heart2, heart3;
     void Awake()
     {
         color = new Color(1, 1, 1, 1);
@@ -280,6 +282,13 @@ public class DogeController : MonoBehaviour
                     respawn();
                 }
             }
+            if (health == 2)
+            {
+                heart3.GetComponent<Renderer>().enabled = false;
+            } else if (health == 1)
+            {
+                heart2.GetComponent<Renderer>().enabled = false;
+            }
         }
     }
 
@@ -310,5 +319,7 @@ public class DogeController : MonoBehaviour
     {
         transform.position = respawnPos;
         health = 3;
+        heart2.GetComponent<Renderer>().enabled = true;
+        heart3.GetComponent<Renderer>().enabled = true;
     }
 }
