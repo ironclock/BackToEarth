@@ -16,10 +16,12 @@ public class EnemyShipBehavior : MonoBehaviour
     private float lastShot = 0.0f;
     public bool stopFiring = false;
 
+
     void Start()
     {
         mGameControl = FindObjectOfType<GameControl>();
         transform.Rotate(0f, 0f, 180f);
+
     }
 
     // Update is called once per frame
