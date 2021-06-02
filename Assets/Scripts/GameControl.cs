@@ -165,11 +165,12 @@ public class GameControl : MonoBehaviour
     private void CheckTime4NextPlanet(){
         float score = mScoringSystem.getScore();
         float planCt = mSolarSystem.getPlanetCount() + 1;
-        int numPlans = 8;
+        int numPlans = 7;
         float end = mScoringSystem.getFinalBossThreshold();
         if(score >= (planCt / numPlans * end) ){
             Debug.Log(planCt / numPlans * end);
             mSolarSystem.NextPlanet();
+            mSolarSystem.incrementPlanetCount();
         }
     }
 }

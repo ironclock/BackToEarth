@@ -20,15 +20,15 @@ public class IndivdualPlanetBehavior : MonoBehaviour
         if((gameObject.name == "Pluto") ||
            (gameObject.name == "Uranus"))
         {
-            transform.position = new Vector3(rightStart, 25f, 0f);
+            transform.position = new Vector3(rightStart, 30f, 0f);
         }
         else if((gameObject.name == "Neptune") ||
                 (gameObject.name == "Mars"))
         {
-            transform.position = new Vector3(leftStart, 25f, 0f);
+            transform.position = new Vector3(leftStart, 30f, 0f);
         }
         else{//Saturn or Jupiter
-            transform.position = new Vector3(middleStart, 25f, 0f);
+            transform.position = new Vector3(middleStart, 30f, 0f);
         }
     }
 
@@ -36,7 +36,7 @@ public class IndivdualPlanetBehavior : MonoBehaviour
     {
         if(planetTrigger){
             Vector3 pos = transform.position;
-            if(pos.y > -20f){
+            if(pos.y > -30f){
                 transform.position += (speedDown * Vector3.down) * Time.deltaTime;
             }
         }

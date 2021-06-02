@@ -20,7 +20,7 @@ public class PlanetBehavior : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void NextPlanet(){
@@ -28,7 +28,7 @@ public class PlanetBehavior : MonoBehaviour
             //asteroidBelt stuff
         }
         else{
-            planetCount++;
+            //planetCount++;
             if(planetCount == 6)
             {
                 asteroidBelt = true;
@@ -39,5 +39,7 @@ public class PlanetBehavior : MonoBehaviour
     public int getPlanetCount(){
         return planetCount;
     }
-
+    public void incrementPlanetCount(){
+        planetCount++;
+    }
 }
