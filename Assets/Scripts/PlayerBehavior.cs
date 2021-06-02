@@ -87,7 +87,6 @@ public class PlayerBehavior : MonoBehaviour
         if(collision.gameObject.tag == "Enemy"){
             Debug.Log("Enemy collision with player");
             mHealthSystem.AddDamageFromEnemy();
-            Destroy(collision.gameObject);
             //possible VFX:
             //add a bounce from bumping into enemy
             //flash red from collision

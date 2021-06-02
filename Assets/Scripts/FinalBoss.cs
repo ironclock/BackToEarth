@@ -13,13 +13,19 @@ public class FinalBoss : MonoBehaviour
 
     private float speed = 0.5f;
     private int distMax = 13;
-    private bool moveRight = true;
     private int staticY = 7;
 
     private float fireRate = 1.5f;
     private float lastShot = 0.0f;
     private int numProjects = 5;
     private int[] projAngle = {-30, -15, 0, 15, 30};
+
+    private bool visible = true;
+    private bool visChange = false;
+    private float lastVis = 0f;
+    private float visChangeRate = 0.5f;
+    private int visCount = 0;
+    private int maxVis = 5;
 
     void Start()
     {
@@ -40,6 +46,10 @@ public class FinalBoss : MonoBehaviour
         }
         if(currPhase == 3){
             Phase3();
+        }
+
+        if(visChange){
+            gradualVisChange();
         }
     }
 
@@ -82,35 +92,121 @@ public class FinalBoss : MonoBehaviour
         if(numCollides >= maxCollides){
             currPhase = 2;
             numCollides = 0;
+            toggleVisibility();
         }
     }
 
     private void Phase2()
     {
-        //move along y-axis(x changes) randomly every 2 seconds
+        //while invisible move back and forth along y-axis(x changes)
+        Vector3 endpoint1 = new Vector3(-distMax, staticY, 0);
+        Vector3 endpoint2 = new Vector3(distMax, staticY, 0);
+        transform.position = Vector3.Lerp (endpoint1, endpoint2, Mathf.PingPong(Time.time * speed, 1.0f));
+        
         //shoot projectiles that have blast radius upon exploding
+        if(Time.time > lastShot + fireRate)
+        {
+            fire2();
+            lastShot = Time.time;
+        }
+
         if(numCollides >= maxCollides){
             currPhase = 3;
             numCollides = 0;
+            toggleVisibility(); //"breaks invisibility shield"
         }
     }
 
     private void Phase3()
-    {
-        //move randomly on y-axis when firing, invisible but appears briefly when firing
-        //shoot projectiles that are invisible until right before they explode, small blast radius, hearing firing alerts player too
-        if(numCollides >= maxCollides){//temp, triggers end of final boss sequence
+    {        
+        //while invisible move back and forth along y-axis(x changes)
+        Vector3 endpoint1 = new Vector3(-distMax, staticY, 0);
+        Vector3 endpoint2 = new Vector3(distMax, staticY, 0);
+        transform.position = Vector3.Lerp (endpoint1, endpoint2, Mathf.PingPong(Time.time * (speed * 1.5f), 1.0f));
+        
+        //shoot projectiles that have blast radius upon exploding
+        if(Time.time > lastShot + fireRate)
+        {
+            fire2();
+            firePowerful2();
+            lastShot = Time.time;
+        }
+
+        if(numCollides >= (maxCollides * 2)){// triggers end of final boss sequence
             mGameControl.endFinalBossSequence();
             Destroy(gameObject);
         }
     }
 
     private void fire5(){
-        Debug.Log("firreeeeeeeeeeeeeeeeeeee");
-        for(int i = 0; i < 5; i++){
+        Debug.Log("FB1firreeeeeeeeeeeeeeeeeeee");
+        for(int i = 0; i < numProjects; i++){
             GameObject projectile = Instantiate(Resources.Load("Prefabs/mainEnemyProjectile") as GameObject); 
             projectile.transform.localPosition = transform.localPosition;
             projectile.transform.rotation = Quaternion.Euler(0, 0, 180 + projAngle[i]);
         }
+    }
+
+    private void fire2(){
+        Debug.Log("FB2firreeeeeeeeeeeeeeeeeeee");
+        GameObject projectile = Instantiate(Resources.Load("Prefabs/mainEnemyProjectile") as GameObject); 
+        projectile.transform.localPosition = transform.localPosition;
+        projectile.transform.rotation = Quaternion.Euler(0, 0, 180 - 15);
+        
+        projectile = Instantiate(Resources.Load("Prefabs/mainEnemyProjectile") as GameObject); 
+        projectile.transform.localPosition = transform.localPosition;
+        projectile.transform.rotation = Quaternion.Euler(0, 0, 180 + 15);
+    }
+
+    private void firePowerful2(){
+        Debug.Log("FB2firreeeeeeeeeeeeeeeeeeee");
+        GameObject projectile = Instantiate(Resources.Load("Prefabs/mainEnemyTrackingProjectile") as GameObject); 
+        projectile.transform.localPosition = transform.localPosition;
+        projectile.transform.rotation = Quaternion.Euler(0, 0, 180 - 15);
+        
+        projectile = Instantiate(Resources.Load("Prefabs/mainEnemyTrackingProjectile") as GameObject); 
+        projectile.transform.localPosition = transform.localPosition;
+        projectile.transform.rotation = Quaternion.Euler(0, 0, 180 + 15);
+    }
+
+    private void toggleVisibility(){
+        resetVisibility(visible); //in case, moves to next phase in the middle of vis change
+        visible = !visible;
+        visChange = true;
+        lastVis = Time.time;
+    }
+
+    private void gradualVisChange(){
+        //gradually increase/decrease visibility
+        Color tmp = gameObject.GetComponent<SpriteRenderer>().color;
+        if(!visible){//changing to invisible
+            tmp.a = 1f - (visCount * .25f);
+        }
+        else{
+            tmp.a = 0f + (visCount * .25f);
+        }
+        gameObject.GetComponent<SpriteRenderer>().color = tmp;
+        
+        if(Time.time > lastVis + visChangeRate)
+        {
+            lastVis = Time.time;
+            visCount++;
+        }
+        if(visCount == maxVis){
+            Debug.Log("vischangeeee");
+            visChange = false;
+            visCount = 0;
+        }
+    }
+    
+    private void resetVisibility(bool vis){
+        Color tmp = gameObject.GetComponent<SpriteRenderer>().color;
+        if(vis){
+            tmp.a = 1f;
+        }
+        else{
+            tmp.a = 0f;
+        }
+        gameObject.GetComponent<SpriteRenderer>().color = tmp;
     }
 }

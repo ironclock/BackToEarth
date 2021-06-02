@@ -48,6 +48,8 @@ public class EnemyShipBehavior : MonoBehaviour
     {
         if(collision.gameObject.name == "PlayerShip"){
             Debug.Log("Enemy collision with player");
+            mGameControl.OneEnemyDestroyed(gameObject.name);
+            Destroy(gameObject);
         }
         if(collision.gameObject.name == "mainProjectile(Clone)"){
             Debug.Log("Enemy collision with projectile");

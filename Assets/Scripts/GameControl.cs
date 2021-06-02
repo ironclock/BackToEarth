@@ -18,18 +18,20 @@ public class GameControl : MonoBehaviour
     private bool finalBossGenerated = false;
     private bool earthGenerated = false;
     private bool earthTime = false;
-    private float speedDown = 1f;
+    private float speedDown = 2f;
     
     private float genRate = 1f;
     private float lastGen = 0.0f;
 
     private ScoringSystem mScoringSystem;
+    private PlanetBehavior mSolarSystem;
 
     public Camera cam;
     public Bounds b;
     void Start()
     {
         mScoringSystem = FindObjectOfType<ScoringSystem>();
+        mSolarSystem = FindObjectOfType<PlanetBehavior>();
     }
 
     void Update()
@@ -58,6 +60,8 @@ public class GameControl : MonoBehaviour
         if(earthTime){
             EarthAppears();
         }
+        
+        CheckTime4NextPlanet();
     }
     public void GenerateEnemy1(){
         GameObject p = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/EnemyShip") as GameObject);
@@ -158,4 +162,14 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    private void CheckTime4NextPlanet(){
+        float score = mScoringSystem.getScore();
+        float planCt = mSolarSystem.getPlanetCount() + 1;
+        int numPlans = 8;
+        float end = mScoringSystem.getFinalBossThreshold();
+        if(score >= (planCt / numPlans * end) ){
+            Debug.Log(planCt / numPlans * end);
+            mSolarSystem.NextPlanet();
+        }
+    }
 }
