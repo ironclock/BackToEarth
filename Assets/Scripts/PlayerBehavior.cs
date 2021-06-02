@@ -7,11 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerBehavior : MonoBehaviour
 {
     [Header("Movement Behavior")]
-    public float Speed = 0f;
-    public float MaxSpeed = 7f;
-    public float Acceleration = 50f;
-    public float Deceleration = 50f;
-    public float VerticalSpeed = 3f;
+    public float Speed = 10f;
 
 
     [Header("Sprite Animation")]
@@ -45,44 +41,29 @@ public class PlayerBehavior : MonoBehaviour
 
         /* Movement Behavior */
         spriteRenderer.sprite = originalSprite;
-        //myImageComponent.sprite  = originalSprite;
-        if ((Input.GetKey(KeyCode.A)) && (Speed < MaxSpeed))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            Speed = Speed - Acceleration * Time.deltaTime;  
+            position += Vector3.left * Speed * Time.deltaTime * 2;
             spriteRenderer.sprite = pressedLeftSprite;
         }
-        else if ((Input.GetKey(KeyCode.D)) && (Speed > -MaxSpeed)) 
+        
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            Speed = Speed + Acceleration * Time.deltaTime;
+            position += Vector3.right * Speed * Time.deltaTime * 2;
             spriteRenderer.sprite = pressedRightSprite;
         }
-        else 
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            if (Speed > Deceleration * Time.deltaTime) 
-            {
-                Speed = Speed - Deceleration * Time.deltaTime;
-            }
-            else if (Speed < -Deceleration * Time.deltaTime) 
-            {
-                Speed = Speed + Deceleration * Time.deltaTime;
-            }
-            else
-            {
-                Speed = 0;
-            }
+            position += Vector3.up * Speed * Time.deltaTime * 2;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            position += Vector3.up * VerticalSpeed * Time.deltaTime * 2;
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            position += Vector3.down * VerticalSpeed * Time.deltaTime * 2;
+            position += Vector3.down * Speed * Time.deltaTime * 2;
         }
       
-        position.x = transform.position.x + Speed * Time.deltaTime;
+        //position.x = transform.position.x + Speed * Time.deltaTime;
         transform.position = position;
 
 
@@ -106,6 +87,7 @@ public class PlayerBehavior : MonoBehaviour
         if(collision.gameObject.tag == "Enemy"){
             Debug.Log("Enemy collision with player");
             mHealthSystem.AddDamageFromEnemy();
+            Destroy(collision.gameObject);
             //possible VFX:
             //add a bounce from bumping into enemy
             //flash red from collision

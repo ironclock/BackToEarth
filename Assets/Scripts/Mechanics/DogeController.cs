@@ -29,6 +29,7 @@ public class DogeController : MonoBehaviour
     private bool leftPressedOnce;
     private bool rightPressedOnce;
     private bool dashing;
+    private bool crouching;
 
     //jump variables
     public int extraJumps;
@@ -52,6 +53,10 @@ public class DogeController : MonoBehaviour
     public bool playerMovable;
     public Animator animator;
 
+    // crouching
+    private SpriteRenderer spriteRenderer; 
+    public Sprite crouchSprite; 
+
     // health bar
     public GameObject heart1, heart2, heart3;
     void Awake()
@@ -67,10 +72,13 @@ public class DogeController : MonoBehaviour
         characterScaleX = characterScale.x;
         
         dashing = false;
+
     }
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -97,7 +105,7 @@ public class DogeController : MonoBehaviour
             checkDash();
             //tryShooting();
 
-            if (dashing == false)
+            if (dashing == false && crouching == false)
             {
                 float directionX = Input.GetAxisRaw("Horizontal");
                 if (directionX == 0) //not moving
@@ -123,6 +131,11 @@ public class DogeController : MonoBehaviour
         {
             transform.position = spaceship.transform.position;
         }
+    }
+
+    void LateUpdate()
+    {
+        tryCrouching();
     }
 
     private bool IsGrounded() {
@@ -170,58 +183,76 @@ public class DogeController : MonoBehaviour
             jumpCount = 0;
         }
     }
+    private void tryCrouching()
+    {
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            if(IsGrounded())
+            {
+                spriteRenderer.sprite = crouchSprite;
+                crouching = true;
+                //boxCollider2D.size = new Vector3(1f, 0.1f, 1f);
+            }
+        } else {
+            crouching = false;
+            //boxCollider2D.size = new Vector3(1f, 1f, 1f);
+        }
+    }
     private void checkDash()
     {
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) //left
-        {
-            if (canDashLeft())
+        if(crouching == false)
             {
-                dash(-1);
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) //left
+            {
+                if (canDashLeft())
+                {
+                    dash(-1);
+                    dashing = true;
+                    lastDash = Time.time;
+                    leftPressedOnce = false;
+                    rightPressedOnce = false;
+                }
+                else
+                {
+                    leftPressedOnce = true;
+                    rightPressedOnce = false;
+                    firstDashKeyPressed = Time.time;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) //right
+            {
+                if (canDashRight())
+                {
+                    dash(1);
+                    dashing = true;
+                    lastDash = Time.time;
+                    leftPressedOnce = false;
+                    rightPressedOnce = false;
+                }
+                else
+                {
+                    leftPressedOnce = false;
+                    rightPressedOnce = true;
+                    firstDashKeyPressed = Time.time;
+                }
+            }
+            else if (Time.time - lastDash > dashCooldown && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift))) //single key dash
+            {
+                if (characterScale.x > 0) //right
+                {
+                    dash(1);
+                }
+                else //left
+                {
+                    dash(-1);
+                }
                 dashing = true;
                 lastDash = Time.time;
-                leftPressedOnce = false;
-                rightPressedOnce = false;
             }
-            else
+            if (Time.time - lastDash > dashTime)
             {
-                leftPressedOnce = true;
-                rightPressedOnce = false;
-                firstDashKeyPressed = Time.time;
+                dashing = false;
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) //right
-        {
-            if (canDashRight())
-            {
-                dash(1);
-                dashing = true;
-                lastDash = Time.time;
-                leftPressedOnce = false;
-                rightPressedOnce = false;
-            }
-            else
-            {
-                leftPressedOnce = false;
-                rightPressedOnce = true;
-                firstDashKeyPressed = Time.time;
-            }
-        }
-        else if (Time.time - lastDash > dashCooldown && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift))) //single key dash
-        {
-            if (characterScale.x > 0) //right
-            {
-                dash(1);
-            }
-            else //left
-            {
-                dash(-1);
-            }
-            dashing = true;
-            lastDash = Time.time;
-        }
-        if (Time.time - lastDash > dashTime)
-        {
-            dashing = false;
         }
     }
     private bool canDashLeft()
