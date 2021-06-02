@@ -11,7 +11,7 @@ public class ScoringSystem : MonoBehaviour
     private int mEnemy2Value = 5;
     private int mFinalBossValue = 30;
     private int scoreValue = 0;
-    private int mFinalBossThreshold = 70;
+    private int mFinalBossThreshold = 150;
 
     void Start()
     {
