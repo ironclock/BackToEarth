@@ -59,6 +59,8 @@ public class EnemyShipBehavior : MonoBehaviour
             Destroy(collision.gameObject);
             if(numCollides == maxCollides){
                 mGameControl.OneEnemyDestroyed(gameObject.name);
+                GameObject explosion = Instantiate(Resources.Load("Prefabs/Explosion") as GameObject); 
+                explosion.transform.localPosition = transform.localPosition;
                 Destroy(gameObject);
             }
         }
