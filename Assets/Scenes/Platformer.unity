@@ -13316,7 +13316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -15
+  initialHorizontalOffset: -13.9
 --- !u!212 &573525878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14945,7 +14945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -19
+  initialHorizontalOffset: -16.9
 --- !u!212 &977464616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -112521,7 +112521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -17
+  initialHorizontalOffset: -15.4
 --- !u!212 &1611574356
 SpriteRenderer:
   m_ObjectHideFlags: 0
