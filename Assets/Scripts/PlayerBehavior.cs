@@ -15,6 +15,8 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite pressedLeftSprite;
     public Sprite pressedRightSprite;
 
+    [Header("Health System")]
+    public GameObject healthBar;
 
     private SpriteRenderer spriteRenderer; 
     private Vector3 position;
@@ -23,13 +25,13 @@ public class PlayerBehavior : MonoBehaviour
     private float fireRate = 0.3f;
     private float lastShot = 0.0f;
 
-    private HealthSystem mHealthSystem;
+    private int maxHealth = 8;
+    private int currHealth;
     
-
     void Start()
     {
+        currHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        mHealthSystem = FindObjectOfType<HealthSystem>();
         if (spriteRenderer.sprite == null)
         {
             spriteRenderer.sprite = originalSprite; 
@@ -84,20 +86,16 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy"){
-            Debug.Log("Enemy collision with player");
-            mHealthSystem.AddDamageFromEnemy();
-            //possible VFX:
-            //add a bounce from bumping into enemy
-            //flash red from collision
-            //once player is below certain health, show dents
-        }
-        if(collision.gameObject.tag == "EnemyProjectile"){
-            Debug.Log("Enemy collision with projectile");
-            mHealthSystem.AddDamageFromProjectile(collision.gameObject.name);
+        --currHealth;
+        healthBar.transform.GetChild(currHealth).gameObject.GetComponent<Renderer>().enabled = false;
+
+        if (collision.gameObject.tag == "EnemyProjectile")
+        {
             Destroy(collision.gameObject);
         }
-        if(mHealthSystem.getHealth() <= 0){
+
+        if (currHealth <= 0)
+        {
             playerDies();
         }
     }
