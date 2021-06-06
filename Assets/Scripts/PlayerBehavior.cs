@@ -22,6 +22,7 @@ public class PlayerBehavior : MonoBehaviour
     private Vector3 position;
 
     private GameObject mainProjectile;
+    public GameObject restart;
     private float fireRate = 0.3f;
     private float lastShot = 0.0f;
 
@@ -86,8 +87,12 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        --currHealth;
-        healthBar.transform.GetChild(currHealth).gameObject.GetComponent<Renderer>().enabled = false;
+
+        if (collision.gameObject.name != "mainProjectile(Clone)")
+        {
+            --currHealth;
+            healthBar.transform.GetChild(currHealth).gameObject.GetComponent<Renderer>().enabled = false;
+        }
 
         if (collision.gameObject.tag == "EnemyProjectile")
         {
@@ -104,7 +109,12 @@ public class PlayerBehavior : MonoBehaviour
     {
         Debug.Log("player dies");
         //player dies: level restarts
-        SceneManager.LoadScene("SpaceShooter"); //Load scene called Game.
-        //Destroy(gameObject);
-    }
+
+        //SceneManager.LoadScene("SpaceShooter"); //Load scene called Game.
+        Destroy(gameObject);
+        restart.transform.position = new Vector3(0, 0, 0);
+
+    }       
 }
+
+

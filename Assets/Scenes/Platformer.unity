@@ -14391,6 +14391,7 @@ MonoBehaviour:
   heart1: {fileID: 977464613}
   heart2: {fileID: 1611574353}
   heart3: {fileID: 573525875}
+  restart: {fileID: 0}
 --- !u!60 &933165026
 PolygonCollider2D:
   m_ObjectHideFlags: 0

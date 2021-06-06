@@ -59,6 +59,8 @@ public class DogeController : MonoBehaviour
 
     // health bar
     public GameObject heart1, heart2, heart3;
+
+    public GameObject restart;
     void Awake()
     {
         color = new Color(1, 1, 1, 1);
@@ -294,7 +296,7 @@ public class DogeController : MonoBehaviour
         if (collision.gameObject.tag == "DeathZone")
         {
             Debug.Log("Die!");
-            respawn();
+            restartScreen();
         }
         else if (collision.gameObject.tag == "PBullet")
         {
@@ -310,7 +312,7 @@ public class DogeController : MonoBehaviour
                 }
                 else
                 {
-                    respawn();
+                    restartScreen();
                 }
             }
             if (health == 2)
@@ -346,7 +348,12 @@ public class DogeController : MonoBehaviour
         }
     }
 
-    private void respawn()
+    private void restartScreen()
+    {
+        restart.transform.position = new Vector3(0, 0, 0);
+    }
+
+    public void respawn()
     {
         transform.position = respawnPos;
         health = 3;
