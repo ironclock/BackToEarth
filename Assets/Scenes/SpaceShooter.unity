@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -13
+  initialHorizontalOffset: -12
 --- !u!212 &46324651
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &254414758 stripped
@@ -794,9 +794,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 36390353defbc4f52b5f0e8e02b62c5b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a92a76ec80594449bf344bf57173141, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -11
+  initialHorizontalOffset: -10
 --- !u!212 &1016191430
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -15
+  initialHorizontalOffset: -14
 --- !u!212 &1140616006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -12
+  initialHorizontalOffset: -11
 --- !u!212 &1337175753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1872,7 +1872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -16
+  initialHorizontalOffset: -15
 --- !u!212 &1408582374
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -10
+  initialHorizontalOffset: -9
 --- !u!212 &1591008056
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2264,7 +2264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -14
+  initialHorizontalOffset: -13
 --- !u!212 &1627846621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScale: {x: 1, y: 1, z: 1}
   initialVerticalOffset: 9
-  initialHorizontalOffset: -9
+  initialHorizontalOffset: -8
 --- !u!212 &1820210496
 SpriteRenderer:
   m_ObjectHideFlags: 0
