@@ -28,6 +28,7 @@ using UnityEditor;
 /// Demo video: https://www.youtube.com/watch?v=exwExUHX4YA
 /// Instructional video #1: https://www.youtube.com/watch?v=NWLVsCeSYBw
 /// Instructional video #2: https://www.youtube.com/watch?v=xx5VYiIlunU
+/// source: https://assetstore.unity.com/packages/tools/animation/ghost-sprites-2d-40357
 /// </summary>
 
 [RequireComponent(typeof(SpriteRenderer))]
